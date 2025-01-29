@@ -44,3 +44,10 @@ Resources:
       Tags:
       - Key: Name
         Value: lms-db-subnet
+  # Internet Gateway
+  lmsInternetGateway:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+      - Key: Name
+        Value: lms-igw
