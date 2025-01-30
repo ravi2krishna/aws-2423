@@ -118,3 +118,13 @@ Resources:
         Ref: lmsdbSubnet
       RouteTableId:
         Ref: lmspvtRouteTable
+  
+  # RT - Subnet Association 
+  lmswebNetworkAcl:
+    Type: AWS::EC2::NetworkAcl
+    Properties:
+      VpcId:
+        Ref: lmsVPC
+      Tags:
+        - Key: Name
+          Value: lms-web-nacl
