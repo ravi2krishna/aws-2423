@@ -90,3 +90,12 @@ Resources:
         Ref: lmswebSubnet
       RouteTableId:
         Ref: lmspubRouteTable
+
+  # RT - Subnet Association 
+  lmsappSubnetRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId:
+        Ref: lmsappSubnet
+      RouteTableId:
+        Ref: lmspubRouteTable
