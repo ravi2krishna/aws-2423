@@ -161,3 +161,13 @@ Resources:
         Ref: lmswebSubnet
       NetworkAclId:
         Ref: lmswebNetworkAcl
+
+# App NACL 
+  lmsappNetworkAcl:
+    Type: AWS::EC2::NetworkAcl
+    Properties:
+      VpcId:
+        Ref: lmsVPC
+      Tags:
+        - Key: Name
+          Value: lms-app-nacl
