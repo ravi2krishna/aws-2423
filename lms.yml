@@ -101,7 +101,7 @@ Resources:
         Ref: lmspubRouteTable
 
   # Private Route Table
-  lmspubRouteTable:
+  lmspvtRouteTable:
     Type: AWS::EC2::RouteTable
     Properties:
       VpcId:  
@@ -109,3 +109,4 @@ Resources:
       Tags:
       - Key: Name
         Value: lms-pvt-rt
+
