@@ -196,3 +196,11 @@ lmsappnaclOutboundRule:
      RuleAction: allow
      CidrBlock: 0.0.0.0/0
 
+# App NACL Association       
+lmsappSubnetNetworkAclAssociation:
+  Type: AWS::EC2::SubnetNetworkAclAssociation
+  Properties:
+    SubnetId:
+      Ref: lmsappSubnet
+    NetworkAclId:
+      Ref: lmsappNetworkAcl
