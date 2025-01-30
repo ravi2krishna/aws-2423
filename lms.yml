@@ -99,3 +99,13 @@ Resources:
         Ref: lmsappSubnet
       RouteTableId:
         Ref: lmspubRouteTable
+
+  # Private Route Table
+  lmspubRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId:  
+        Ref: lmsVPC
+      Tags:
+      - Key: Name
+        Value: lms-pvt-rt
