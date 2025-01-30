@@ -110,3 +110,11 @@ Resources:
       - Key: Name
         Value: lms-pvt-rt
 
+  # RT - Subnet Association 
+  lmsdbSubnetRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId:
+        Ref: lmsdbSubnet
+      RouteTableId:
+        Ref: lmspvtRouteTable
