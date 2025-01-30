@@ -152,3 +152,12 @@ Resources:
        Egress: true
        RuleAction: allow
        CidrBlock: 0.0.0.0/0
+
+# Web NACL Association       
+  lmswebSubnetNetworkAclAssociation:
+    Type: AWS::EC2::SubnetNetworkAclAssociation
+    Properties:
+      SubnetId:
+        Ref: lmswebSubnet
+      NetworkAclId:
+        Ref: lmswebNetworkAcl
