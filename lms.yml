@@ -61,3 +61,12 @@ Resources:
       InternetGatewayId:
         Ref: lmsInternetGateway
   
+  # Public Route Table
+  lmspubRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId:  
+        Ref: lmsVPC
+      Tags:
+      - Key: Name
+        Value: lms-pub-rt
